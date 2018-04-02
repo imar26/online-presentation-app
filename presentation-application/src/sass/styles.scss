@@ -18,10 +18,8 @@ div {
     display: table;
 }
 
-
-
 header {
-    background-color: $bg-green;
+    background-color: $bg-yellow;
     padding: 15px 30px;
     @include box-shadow(0px, 4px, 9px, -1px, rgba(0, 0, 0, 0.75));
     .left-header {
@@ -31,8 +29,13 @@ header {
         span {
             font-size: 35px;
             line-height: 43px;
-            color: $white;
+            color: $black;
         }
+    }
+    span {
+        font-family: $courgette;
+        font-weight: $f400;
+        color: $black;
     }
 }
 
@@ -47,13 +50,44 @@ footer {
     }
 }
 .mainContent{
-    padding: 80px;
+    padding: 60px 60px 10px;
     background-color: $gray;
 
     .slide{
         width: $w100;
-        height: $h300;
+        height: $h500;
         border: 1px solid black;
         background-color: $white;
     }
+
+    .button {
+        width: auto;
+        background-color: $bg-yellow;
+        border: 0;
+        padding: 4px 15px;
+        margin-right: 15px;
+        font-size: 16px;
+        line-height: 24px;
+        cursor: pointer;
+        @include border-radius(5px);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $asap;
+    font-weight: $f700;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+a {
+    float: right;
+}
+
+.buttons {
+    text-align: center;
+    padding: 25px 0;
 }
