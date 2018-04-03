@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-slide-area',
@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlideAreaComponent implements OnInit {
 
-  constructor() { }
+  @Input() textField: Array<string>;
+  
+
+  constructor() {
+    this.textField = [];
+  }
+
+  createSticky() {
+    this.textField.push("");
+  }
 
   ngOnInit() {
   }

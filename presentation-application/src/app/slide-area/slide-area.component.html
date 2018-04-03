@@ -1,10 +1,11 @@
 <div class="mainContent">
   <div class="slide">
-      <img width="300" src="https://i.ndtvimg.com/i/2018-04/ms-dhoni-twitter_806x604_51522666709.jpg" alt="MS Dhoni" />
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <div *ngFor="let item of textField">
+      <app-text-field [content]="item"></app-text-field>
+  </div>
   </div>
   <div class="buttons">
-    <button class="button">
+    <button class="button"  (click)="createSticky()">
       Add Text
     </button>
     <button class="button">
