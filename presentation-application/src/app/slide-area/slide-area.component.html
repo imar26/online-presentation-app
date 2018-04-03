@@ -1,6 +1,6 @@
 <div class="slide" #myBounds>
   <div *ngFor="let item of textField">
-      <app-text-field [content]="item"></app-text-field>
+      <app-text-field ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [content]="item"></app-text-field>
   </div>
   <div>
     <img ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="url" width="30%">
