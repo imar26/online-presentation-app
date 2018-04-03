@@ -99,9 +99,5 @@ a {
 
 .ng-draggable {
   cursor: move;
-}
-
-.drag-boundary {
-  width: 40%;
-  margin: 0 auto;
+  display: inline-block;
 }
