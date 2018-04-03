@@ -11,6 +11,7 @@ export class SlideAreaComponent implements OnInit {
   inBounds = true;
   url: any;
   datas: Array<any> = [];
+  texts: Array<any> = [];
   
   constructor() {
     this.textField = [];
@@ -18,6 +19,10 @@ export class SlideAreaComponent implements OnInit {
 
   createSticky() {
     this.textField.push("");
+  }
+
+  addTextField() {
+    this.texts.push("");
   }
 
   ngOnInit() {

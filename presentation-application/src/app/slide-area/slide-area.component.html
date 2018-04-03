@@ -1,13 +1,17 @@
 <div class="slide" #myBounds>
   <div class="textList">
-      <app-text-field *ngFor="let item of textField" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [content]="item"></app-text-field>
+      <!-- <app-text-field *ngFor="let item of textField" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [content]="item"></app-text-field> -->
+      <input type="text" *ngFor="let text of texts" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" />
   </div>
-  <div class="imagesList" *ngFor="let data of datas">
-    <img ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="data" width="30%">
+  <div class="imagesList">
+    <img *ngFor="let data of datas" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="data" width="30%">
   </div>
 </div>
 <div class="buttons">
-  <button class="button" (click)="createSticky()">
+  <!-- <button class="button" (click)="createSticky()">
+    Add Text
+  </button> -->
+  <button class="button" (click)="addTextField()">
     Add Text
   </button>
   <input type="file" id="file" value="Add Image" (change)="readUrl($event)" style="display: none;" />
