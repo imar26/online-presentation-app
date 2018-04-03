@@ -1,17 +1,13 @@
 <div class="slide" #myBounds>
+  <div *ngFor="let item of textField">
+      <app-text-field [content]="item"></app-text-field>
+  </div>
   <div>
     <img ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="url" width="30%">
   </div>
-  <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="inBounds">
-    <img width="300" src="https://i.ndtvimg.com/i/2018-04/ms-dhoni-twitter_806x604_51522666709.jpg" alt="MS Dhoni" />
-  </div>
-  <br/>
-  <div ngDraggable [bounds]="myBounds" [inBounds]="inBounds">
-    <p>This Day. That Year.</p>
-  </div> -->
 </div>
 <div class="buttons">
-  <button class="button">
+  <button class="button" (click)="createSticky()">
     Add Text
   </button>
   <input type="file" id="file" value="Add Image" (change)="readUrl($event)" style="display: none;" />

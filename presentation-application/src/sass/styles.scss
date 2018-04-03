@@ -48,7 +48,9 @@ footer {
     color: $white;
   }
 }
-
+.sticky{
+  position: $absolute;
+}
 .mainContent {
   padding: 50px 60px 10px;
   background-color: $gray;
