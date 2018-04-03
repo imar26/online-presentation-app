@@ -1,9 +1,9 @@
 <div class="slide" #myBounds>
-  <div *ngFor="let item of textField">
-      <app-text-field ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [content]="item"></app-text-field>
+  <div class="textList">
+      <app-text-field *ngFor="let item of textField" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [content]="item"></app-text-field>
   </div>
-  <div>
-    <img ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="url" width="30%">
+  <div class="imagesList" *ngFor="let data of datas">
+    <img ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="data" width="30%">
   </div>
 </div>
 <div class="buttons">

@@ -28,11 +28,8 @@ export class SlideAreaComponent implements OnInit {
       var reader = new FileReader();
       reader.onload = (event:any) => {
         this.url = event.target.result;
-        // console.log(this.url);
-        // this.datas.push(this.url);
-        // console.log(this.datas);
+        this.datas.push(this.url);
       }
-  
       reader.readAsDataURL(event.target.files[0]);
     }
   }  
