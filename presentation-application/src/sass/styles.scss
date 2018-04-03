@@ -50,7 +50,7 @@ footer {
 }
 
 .mainContent {
-  padding: 60px 60px 10px;
+  padding: 50px 60px 10px;
   background-color: $gray;
   .slide {
     width: $w100;
@@ -59,6 +59,11 @@ footer {
     background-color: $white;
     overflow: hidden;
     position: relative;
+  }
+  label {
+    &.button {
+      padding: 7px 15px; 
+    }
   }
   .button {
     width: auto;
@@ -100,4 +105,12 @@ a {
 .ng-draggable {
   cursor: move;
   display: inline-block;
+}
+
+*:focus {
+  outline: 0;
+}
+
+img[src=null] {
+  display: none;
 }

@@ -1,19 +1,19 @@
-<div class="mainContent">
-  <div class="slide" [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }" style="text-align: center" #myBounds>      
-      <div ngDraggable [bounds]="myBounds" [inBounds]="inBounds" (edge)="checkEdge($event)">
-        <img width="300" src="https://i.ndtvimg.com/i/2018-04/ms-dhoni-twitter_806x604_51522666709.jpg" alt="MS Dhoni" />
-      </div>
-      <br/>
-      <div ngDraggable [bounds]="myBounds" [inBounds]="inBounds" (edge)="checkEdge($event)">
-        <p>Lorem Ipsum text.</p>
-      </div>
+<div class="slide" #myBounds>
+  <div>
+    <img ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [src]="url" width="30%">
   </div>
-  <div class="buttons">
-    <button class="button">
-      Add Text
-    </button>
-    <button class="button">
-      Add Image
-    </button>
+  <!-- <div ngDraggable [bounds]="myBounds" [inBounds]="inBounds">
+    <img width="300" src="https://i.ndtvimg.com/i/2018-04/ms-dhoni-twitter_806x604_51522666709.jpg" alt="MS Dhoni" />
   </div>
+  <br/>
+  <div ngDraggable [bounds]="myBounds" [inBounds]="inBounds">
+    <p>This Day. That Year.</p>
+  </div> -->
+</div>
+<div class="buttons">
+  <button class="button">
+    Add Text
+  </button>
+  <input type="file" id="file" value="Add Image" (change)="readUrl($event)" style="display: none;" />
+  <label for="file" class="button">Add Image</label>
 </div>
