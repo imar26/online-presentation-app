@@ -6,19 +6,12 @@ import { Component, OnInit, Input} from '@angular/core';
   styleUrls: ['./slide-area.component.scss']
 })
 export class SlideAreaComponent implements OnInit {
-  @Input() textField: Array<string>;
-  
   inBounds = true;
   url: any;
   datas: Array<any> = [];
   texts: Array<any> = [];
   
   constructor() {
-    this.textField = [];
-  }
-
-  createSticky() {
-    this.textField.push("");
   }
 
   addTextField() {

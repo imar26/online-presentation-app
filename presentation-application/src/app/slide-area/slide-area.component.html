@@ -1,6 +1,5 @@
 <div class="slide" #myBounds>
   <div class="textList">
-      <!-- <app-text-field *ngFor="let item of textField" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" [content]="item"></app-text-field> -->
       <input type="text" *ngFor="let text of texts" ngDraggable [bounds]="myBounds" [inBounds]="inBounds" />
   </div>
   <div class="imagesList">
@@ -8,9 +7,6 @@
   </div>
 </div>
 <div class="buttons">
-  <!-- <button class="button" (click)="createSticky()">
-    Add Text
-  </button> -->
   <button class="button" (click)="addTextField()">
     Add Text
   </button>

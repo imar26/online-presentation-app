@@ -7,16 +7,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SlideAreaComponent } from './slide-area/slide-area.component';
-import { TextFieldComponent } from './text-field/text-field.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SlideAreaComponent,
-    TextFieldComponent
-   
+    SlideAreaComponent
   ],
   imports: [
     BrowserModule,
