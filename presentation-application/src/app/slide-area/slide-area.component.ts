@@ -13,14 +13,14 @@ export class SlideAreaComponent implements OnInit {
   
   constructor() {
   }
-
+  //Adds a textbox in the slide area
   addTextField() {
     this.texts.push("");
   }
 
   ngOnInit() {
   }
-
+  //Adds an image in the slide area
   readUrl(event:any) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
